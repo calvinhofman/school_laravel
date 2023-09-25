@@ -6,6 +6,18 @@ export default {
     "./resources/**/*.vue",
   ],
   theme: {
+    container: {
+      center: true,
+      screens: {
+        default: '400px',
+        sm: '600px',
+        md: '728px',
+        lg: '900px',
+        xl: '900px',
+        '2xl': '1224px',
+      },
+
+    },
     extend: {},
   },
   plugins: [],

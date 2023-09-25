@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
 use App\Http\Controllers\Games\GamesController;
+use App\Http\Controllers\Manga\MangaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,8 +16,13 @@ use App\Http\Controllers\Games\GamesController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+
+//     // return view('welcome');
+// });
+
+Route::controller(MangaController::class)->group(function() {
+    Route::get('/', 'getMangaData')->name('home');
 });
 
 Route::controller(LoginRegisterController::class)->group(function() {
