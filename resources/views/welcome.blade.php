@@ -13,7 +13,7 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<header class="bg-red-800 py-2">
+<header class="bg-blue-800 py-2">
     <nav class="flex flex-row justify-between container">
         <div class="">Logo</div>
         <ul class="flex flex-row justify-between space-x-8">
@@ -25,7 +25,22 @@
     </nav>
 </header>
 
-<body class="antialiased">
+<body class="antialiased bg-gray-600">
+
+    <div class="flex flex-row justify-between flex-wrap container mt-4">
+        @foreach ($data as $anime)
+        <div class="flex bg-blue-600 p-2 flex-col w-[400px]">
+            <div class="mx-auto">
+                <img class="w-[full] h-[400px]" src="{{ $anime['image'] }}" alt="">
+            </div>
+            {{ $anime['title'] }}
+            Genre's
+            @foreach ($anime['genres'] as $genre)
+                {{ $genre }}
+            @endforeach
+        </div>
+        @endforeach
+    </div>
 
 </body>
 <footer>
