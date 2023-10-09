@@ -23,22 +23,22 @@ class MangaController extends Controller
           if (isset($data['results'])) {
               $results = $data['results'];
               foreach ($results as $result) {
-                  $id = Str::uuid(); // Generate a UUID for each record (assuming you want a UUID for each)
+                //   $id = Str::uuid(); // Generate a UUID for each record (assuming you want a UUID for each)
   
-                  $currentDate = Carbon::now();
+                //   $currentDate = Carbon::now();
 
 
-                  $genres = implode(', ', $result['genres']); // Assuming 'genres' is an array in your JSON data
+                //   $genres = implode(', ', $result['genres']); // Assuming 'genres' is an array in your JSON data
 
 
                   // Insert data into the 'anime' table
-                  DB::table('anime')->insert([
-                      'anime_id' => $id,
-                      'title' => $result['title'], // Replace with the actual array key for 'title'
-                      'link' => $result['url'], // Replace with the actual array key for 'title'
-                      'genre' => $genres, // Replace with the actual array key for 'genre'
-                      'publish_date' => $currentDate, // Replace with the actual array key for 'publish_date'
-                  ]);
+                //   DB::table('anime')->insert([
+                //       'anime_id' => $id,
+                //       'title' => $result['title'], // Replace with the actual array key for 'title'
+                //       'link' => $result['url'], // Replace with the actual array key for 'title'
+                //       'genre' => $genres, // Replace with the actual array key for 'genre'
+                //       'publish_date' => $currentDate, // Replace with the actual array key for 'publish_date'
+                //   ]);
               }
   
               return view('welcome', ['data' => $results]); // Pass the "results" array to the view
