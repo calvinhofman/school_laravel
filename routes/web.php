@@ -35,6 +35,7 @@ Route::controller(LoginRegisterController::class)->group(function() {
     Route::get('/dashboard', 'dashboard')->name('dashboard');
     Route::post('/logout', 'logout')->name('logout');
     Route::post('/animes', 'animes')->name('animes');
+    Route::post('/edituser', 'edituser')->name('edituser');
 });
 
 Route::controller(gameController::class)->group(function() {

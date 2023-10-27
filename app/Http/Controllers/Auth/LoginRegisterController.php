@@ -92,11 +92,13 @@ class LoginRegisterController extends Controller
         return redirect()->route('login')->withSuccess('you logged out succesfully');
     }
 
+    public function edituser(Request $request) {
+        dd($request);
+        exit;
+    }
+
     public function animes()
     {
-
-        var_dump('dsa');
-        exit;
 
         if (auth()->user()->role == 2) {
             $client = new Client();
