@@ -6,19 +6,17 @@
     <div class="col-md-8">
         <div class="card">
             <div class="card-header">Dashboard</div>
-            <div class="card-body">
-                @if ($message = Session::get('success'))
-                    <div class="alert alert-success">
-                        {{ $message }}
-                    </div>
-                @else
-                    <div class="alert alert-success">
-                        You are logged in!
-                    </div>       
-                @endif                
+            <div class="border-2 border-blue-600 rounded-xl p-2 flex flex-col space-y-4">
+                <div>
+                    <form action="{{ route('animes') }}" method="post">
+                        @csrf
+                        <button type="submit">Sync</button>
+                    </form>
+
+                </div>
             </div>
         </div>
-    </div>    
+    </div>
 </div>
-    
+
 @endsection

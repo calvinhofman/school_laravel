@@ -28,8 +28,9 @@
                             @endif
                         </div>
                     </div>
-                    <div class="mb-3 row">
+                    <div class="mb-3 row space-x-4">
                         <input type="submit" class="col-md-3 offset-md-5 btn btn-primary" value="Login">
+                        <a href="{{ route('register') }}">Register</a>
                     </div>
                     
                 </form>

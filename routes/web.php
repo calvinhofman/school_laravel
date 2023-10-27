@@ -23,6 +23,8 @@ use App\Http\Controllers\Manga\MangaController;
 
 Route::controller(MangaController::class)->group(function() {
     Route::get('/', 'getMangaData')->name('home');
+    Route::get('/filter/anime', 'filter')->name('filter.anime');
+
 });
 
 Route::controller(LoginRegisterController::class)->group(function() {
@@ -32,6 +34,7 @@ Route::controller(LoginRegisterController::class)->group(function() {
     Route::post('/authenticate', 'authenticate')->name('authenticate');
     Route::get('/dashboard', 'dashboard')->name('dashboard');
     Route::post('/logout', 'logout')->name('logout');
+    Route::post('/animes', 'animes')->name('animes');
 });
 
 Route::controller(gameController::class)->group(function() {

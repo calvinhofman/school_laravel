@@ -17,13 +17,11 @@
     <nav class="flex flex-row justify-between container">
         <div class="">Logo</div>
         <ul class="flex flex-row justify-between space-x-8">
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li class="bg-blue-400 rounded-lg p-1 px-4"><a href="">Login</a></li>
+            <li class="bg-blue-400 rounded-lg p-1 px-4"><a href="{{ route('login') }}">Login</a></li>
         </ul>
     </nav>
 </header>
+
 
 <body class="antialiased bg-gray-600">
 
